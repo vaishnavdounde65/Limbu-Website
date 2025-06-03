@@ -12,5 +12,11 @@ A clean, modern, and responsive website built to represent the **Limbu** identit
 - Optimized for performance and fast loading
 ite:
 
+📄 License
+
+This project is free and open to explore, learn from, or get inspired by.
+However, do not directly copy or redistribute it as your own without credit.
+A little respect goes a long way. ❤️
+
 📩 **Contact me on Discord** → `arguexd`
 
