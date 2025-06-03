@@ -10,15 +10,7 @@ A clean, modern, and responsive website built to represent the **Limbu** identit
 - Smooth navigation and clean UI
 - Minimalistic design inspired by cultural identity
 - Optimized for performance and fast loading
-
-## 💼 Usage
-
-This repository showcases the deployed project only. The source code is **not open-source** and is part of a **paid package**.
-
-If you're interested in purchasing the source code or a custom website:
+ite:
 
 📩 **Contact me on Discord** → `arguexd`
 
-## 📎 License
-
-This project is **not open-source**. All rights reserved. Unauthorized use, distribution, or reproduction of the code is prohibited.
