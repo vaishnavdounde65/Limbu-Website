@@ -1,0 +1,549 @@
+/* FONT IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Antic&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+
+/* ------------------------------- Nav Bar ------------------------------------ */
+.custom-navbar {
+    background-color: #161616;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease; /* Smooth hide/show transition */
+
+}
+
+.custom-navbar.hidden {
+    transform: translateY(-100%); /* Hide by moving up */
+    opacity: 0;
+    pointer-events: none; /* Disable clicks when hidden */
+}
+
+.custom-navbar .navbar-brand img {
+    position: relative;
+    bottom: 5px;
+    left: 0%;
+    height: 30px;
+    width: auto;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0.5rem 1rem;
+    color: WHITE;
+    transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+    color: #E1B200;
+}
+
+.custom-navbar .navbar-nav .nav-link.active {
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 2px solid #fff;
+}
+
+.custom-navbar .btn-visit-store {
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 2px;
+    border: 1px solid white;
+    padding: 8px 16px;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.custom-navbar .btn-visit-store:hover {
+    background-color: #ffffff;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.custom-navbar .navbar-toggler {
+    border-color: rgba(255,255,255,0.5);
+}
+
+.custom-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (min-width: 992px) {
+    #navbarContent {
+        position: static;
+    }
+}
+
+@media (max-width: 992px) {
+    .position-absolute {
+        position: static !important;
+        transform: none !important;
+        text-align: center;
+        margin: 1rem 0;
+        width: 100%;
+    }
+    
+    .ms-auto {
+        margin: 0 auto !important;
+        display: table;
+    }
+}
+
+.nav-item {
+    padding: 0 12px;
+}
+
+.navbar-brand {
+    position: relative;
+    z-index: 1;
+}
+/* ----------------------------- Nav Bar END ----------------------------------- */
+
+/* ---------------------- PAGES LAYOUT STYLING --------------------------- */
+body {
+    overflow-x: hidden;
+    padding-top: 56px; /* To account for fixed navbar */
+    -webkit-user-select:none;-moz-user-select:-moz-none;
+    -ms-user-select:none;user-select:none;
+}
+
+.full-height-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+}
+
+#home {
+    background-color: #161616;
+}
+
+#about {
+    background-color: #FDD835;
+}
+#products {
+    background-color: #FDD835;
+}
+#reviews {
+    background-color: #161616;
+}
+
+#contact {
+    background-color:  #161616;
+}
+
+
+.section-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-20px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+}
+
+.btn-custom {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    transition: all 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: white;
+    color: #333;
+}
+
+/* ---------------------- PAGAES LAYOUT STYLING END --------------------------- */
+
+/* ---------------------- HOME PAGE  --------------------------- */
+/* Home Section Styling */
+.home-section {
+    background-color: #161616;
+    color: white;
+    min-height: 100vh;
+    height: auto;
+    padding: 80px 0 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.home-content {
+    padding: 20px 0;
+}
+
+.home-image {
+    position: relative;
+    top: 40px;
+    max-height: 65vh;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+/* Mobile Optimization */
+@media (max-width: 992px) {
+    .home-section {
+        min-height: calc(100vh + 100px); /* Extra space for content */
+        padding-top: 100px; /* More space below navbar */
+        padding-bottom: 60px;
+    }
+    
+    .home-image {
+        max-height: 50vh;
+        margin-bottom: 30px;
+    }
+    
+    .home-content {
+        padding-top: 0;
+        margin-bottom: 30px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 576px) {
+    .home-section {
+        min-height: calc(100vh + 150px);
+    }
+    
+    .home-image {
+        max-height: 35vh;
+    }
+    
+    h1.display-3 {
+        font-size: 2.2rem !important;
+    }
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #E1B200;
+    border-color: #E1B200;
+    color: #161616;
+    padding: 10px 30px;
+    border-radius: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: #E1B200;
+}
+
+/* "SINCE 2005" - Small uppercase text */
+.home-content p.text-uppercase {
+    font-size: 16px;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+    margin-bottom: 1rem;
+}
+
+/* "Refresh Your Day" - Main heading */
+.home-content h1.display-3 {
+    font-family: "Ultra", serif;
+    font-weight: 100;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+/* Description text */
+.home-content p.lead {
+    font-size: 20px;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* ---------------------- HOME PAGE END --------------------------- */ 
+
+/* ---------------------- ABOUT PAGE  --------------------------- */
+/* About Section Styling */
+#about {
+    padding: 80px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    #about {
+        padding: 60px 0;
+    }
+    
+    .ps-lg-5 {
+        padding-left: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    #about h2.display-5 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    
+    #about {
+        padding: 40px 0;
+    }
+}
+
+/* Image Container */
+.responsive-image-container {
+    width: 100%;
+    max-width: 500px; /* Maximum size on large screens */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Image Styles */
+.responsive-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Prevents distortion */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .responsive-image-container {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ps-lg-4 {
+        padding-left: 0 !important;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .responsive-image-container {
+        max-width: 60%;
+    }
+}
+
+/* Text alignment control */
+.text-lg-start.text-center {
+    text-align: center; /* Default for mobile */
+}
+
+@media (min-width: 992px) {
+    .text-lg-start.text-center {
+        text-align: left !important; /* Left align on desktop */
+    }
+}
+
+/* Responsive typography */
+.ourstory {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+  font-style: normal;
+  letter-spacing: 5px;
+
+}
+
+.aboutlimbu {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.aboutparagraph {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 768px) {
+    .ourstory {
+        font-size: 1.3rem;
+    }
+    .aboutlimbu {
+        font-size: 3rem;
+    }
+    .aboutparagraph {
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .aboutlimbu {
+        font-size: 3.5rem;
+    }
+    .aboutparagraph {
+        padding-right: 2rem;
+    }
+}
+
+/* ---------------------- ABOUT PAGE END --------------------------- */
+
+/* ---------------------- PRODUCTS PAGE  --------------------------- */
+/* Horizontal Scroller */
+.products-scroller-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .products-scroller {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .products-scroller::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .product-card {
+    flex: 0 0 180px;
+    text-align: center;
+  }
+  .product-card > h3{
+    font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5rem;
+  }
+  
+  .product-image {
+    width: 160px;
+    height: 160px;
+    background: #FFF5E0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    padding: 20px;
+  }
+  
+  .product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .btn-scroll {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #eee;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-scroll:hover {
+    background: #f8f9fa;
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .product-card {
+      flex: 0 0 150px;
+    }
+    .product-image {
+      width: 130px;
+      height: 130px;
+    }
+  }
+  
+  .ourmenu{
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;font-size: 1.4rem;
+    letter-spacing: 3px;
+  }
+  .meetthesquad{
+    font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+
+/* --------------------------------- Product Section End ------------------------ */
+
+/* ---------------------- REVIEWS PAGE  --------------------------- */
+.ourreviews{
+    font-family:"ultra", serif;
+    font-weight: 400;
+    color: white;
+}
+
+  /* ---------------------- REVIEWS PAGE END  --------------------------- */
+
+/* ---------------------- CONTACT PAGE  --------------------------- */
+
+.contactus{
+    font-family: "Ultra", serif;
+    font-weight: 200;
+    color: white;
+}
+
+/* ---------------------- CONTACT PAGE END  --------------------------- */
+
+/* ---------------------- FOOTER  --------------------------- */
+.footer{
+    background-color: #161616;
+}
+
